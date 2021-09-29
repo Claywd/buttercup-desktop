@@ -71,47 +71,23 @@
     "linux": {
       "icon": "./resources/build/icons",
       "target": [
-        "AppImage"
+        {
+          "target": "appImage",
+          "arch": [
+            "x64",
+            "armv7l",
+            "arm64"
+          ]
+        }
       ],
       "category": "Utility",
       "synopsis": "Free and Open Source Password Vault",
-      "artifactName": "${productName}-${os}-${env.NODE_ARCHITECTURE}.${ext}",
+      "artifactName": "${productName}-${os}.${ext}",
       "desktop": {
         "Name": "Buttercup Password Manager",
         "Type": "Application",
         "Comment": "A free and open-source password management application",
         "Terminal": "false"
-      }
-    },
-    "mac": {
-      "category": "public.app-category.productivity",
-      "darkModeSupport": true,
-      "entitlements": "./resources/build/entitlements.plist",
-      "entitlementsInherit": "./resources/build/entitlements.plist",
-      "gatekeeperAssess": false,
-      "hardenedRuntime": true,
-      "icon": "./resources/build/icon.icns"
-    },
-    "dmg": {
-      "artifactName": "${productName}-${os}-x64-${version}.${ext}",
-      "background": "./resources/build/background@2x.png",
-      "icon": "./resources/build/icon.icns",
-      "contents": [
-        {
-          "x": 396,
-          "y": 345,
-          "type": "link",
-          "path": "/Applications"
-        },
-        {
-          "x": 396,
-          "y": 110,
-          "type": "file"
-        }
-      ],
-      "window": {
-        "width": 660,
-        "height": 480
       }
     },
     "protocols": [
@@ -132,23 +108,13 @@
     "directories": {
       "output": "dist"
     },
-    "win": {
-      "icon": "./resources/build/icon.ico",
-      "artifactName": "${productName}-${os}-${env.NODE_ARCHITECTURE}-${version}.${ext}",
-      "target": [
-        "nsis",
-        "portable",
-        "7z"
-      ],
-      "publisherName": "MadDev Oy"
-    },
     "nsis": {
-      "artifactName": "${productName}-${os}-${env.NODE_ARCHITECTURE}-${version}-installer.${ext}",
+      "artifactName": "${productName}-${os}-${version}-installer.${ext}",
       "perMachine": true,
       "include": "./resources/build/installer.nsh"
     },
     "portable": {
-      "artifactName": "${productName}-${os}-${env.NODE_ARCHITECTURE}-${version}-portable.${ext}"
+      "artifactName": "${productName}-${os}-${version}-portable.${ext}"
     }
   },
   "dependencies": {
