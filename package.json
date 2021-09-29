@@ -1,6 +1,6 @@
 {
   "name": "Buttercup",
-  "version": "2.10.6",
+  "version": "2.10.7",
   "description": "Buttercup Password Manager",
   "main": "build/main/index.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/buttercup/buttercup-desktop.git"
+    "url": "git+https://github.com/Claywd/buttercup-desktop.git"
   },
   "lint-staged": {
     "{resources,source,test}/**/*.{js,ts}": [
