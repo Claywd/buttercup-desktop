@@ -78,7 +78,7 @@
             "armv7l",
             "arm64"
           ]
-        },
+        }
       ],
       "category": "Utility",
       "synopsis": "Free and Open Source Password Vault",
