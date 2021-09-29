@@ -1,6 +1,6 @@
 {
   "name": "Buttercup",
-  "version": "2.10.7",
+  "version": "2.10.8",
   "description": "Buttercup Password Manager",
   "main": "build/main/index.js",
   "scripts": {
@@ -45,10 +45,6 @@
   ],
   "author": "MadDev",
   "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/buttercup/desktop/issues"
-  },
-  "homepage": "https://github.com/buttercup/desktop#readme",
   "build": {
     "afterSign": "electron-builder-notarize",
     "afterAllArtifactBuild": "./resources/scripts/fix-mac-zip.js",
@@ -99,7 +95,7 @@
     "publish": [
       {
         "provider": "github",
-        "owner": "buttercup",
+        "owner": "Claywd",
         "repo": "buttercup-desktop"
       }
     ],
